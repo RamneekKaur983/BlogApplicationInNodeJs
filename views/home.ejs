@@ -1,0 +1,24 @@
+<%- include('partials/header.ejs') %>
+<h1>Home</h1>
+
+<p> <%= Content %></p>
+
+<div>
+
+    
+    <% postContent.forEach(function(post) { %>
+      <%  var myString = post.PostBody %>
+     <%   var myTruncatedString = myString.substring(0,100)+"..."; %>
+        <h1><%= post.title %></h1> 
+       
+        <p><%= myTruncatedString %>  <a     onclick="location.href= '/posts/<%=post.title %>' " type="button"> Read More </a> </p>
+           
+        
+         <%  })  %>
+</div>
+    
+
+
+
+ 
+<%- include('partials/footer.ejs') %>
