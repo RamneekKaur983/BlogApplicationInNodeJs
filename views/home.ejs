@@ -7,11 +7,11 @@
 
     
     <% postContent.forEach(function(post) { %>
-      <%  var myString = post.PostBody %>
+      <%  var myString = post.content %>
      <%   var myTruncatedString = myString.substring(0,100)+"..."; %>
         <h1><%= post.title %></h1> 
        
-        <p><%= myTruncatedString %>  <a     onclick="location.href= '/posts/<%=post.title %>' " type="button"> Read More </a> </p>
+        <p><%= myTruncatedString %>  <a     onclick="location.href= '/posts/<%=post._id %>' " type="button"> Read More </a> </p>
            
         
          <%  })  %>
